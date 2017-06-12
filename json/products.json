@@ -1,0 +1,8 @@
+{	
+	"head_nav_products":[
+	    {"name":"小米Max","price":"1499","img":"images/nav/max.jpg"},
+	    {"name":"小米手机5","price":"1999","img":"images/nav/mi5.jpg"},
+	    {"name":"小米手机4c","price":"1699","img":"images/nav/mi4c.jpg"}
+	]
+	
+}

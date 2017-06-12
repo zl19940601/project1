@@ -1,0 +1,8 @@
+.error_backgroung {
+    height: 500px;
+    width: 100%;
+    background: #fff url(../images/error.jpg) no-repeat 250px top;
+}
+.error_content {
+    padding: 280px 500px;
+}

@@ -1,0 +1,93 @@
+
+<!--工具栏-->
+<div id="head_topbar">
+	<div class="container">	
+		<div>
+			<ul>
+				<li class="lt"><a href="index.html">小米网</a></li>
+				<li class="lt"><a href="error.html">MIUI</a></li>
+				<li class="lt"><a href="error.html">米聊</a></li>
+				<li class="lt"><a href="error.html">游戏</a></li>
+				<li class="lt"><a href="error.html">多看阅读</a></li>
+				<li class="lt"><a href="error.html">云服务</a></li>
+				<li class="lt"><a href="error.html">小米网移动版</a></li>
+				<li class="lt"><a href="error.html">问题反馈</a></li>
+				<li class="lt"><a href="error.html">Select Region</a></li>
+			</ul>
+		</div>
+		<div id="head_shopcart" class="rt">
+	    	<a href="shopcart.html">购物车</a>
+	    </div>
+		<div id="head_lgsg" class="rt">
+			<ul>
+				<li class="lt"><a href="login.html">登录</a></li>
+				<li class="lt"><a href="signin.html">注册</a></li>
+			</ul>
+		</div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!--导航栏-->
+<div class="container">
+	<div class="lt" id="head_loge"><a href="index.html"><img alt="图标" title="手机官网" src="images/icon/logo-footer.png" /></a></div>
+	<div class="lt">
+	    <ul class="nav nav-tabs" id="head_mytab">
+	        <li class="head_nav_item"><a href="" name="phone">小米手机</a>
+	        	<div id="head_product_item_div">
+					<ul class="clearfix" id="head_product_item_ul">
+						<li class="lt"></li>
+						<li class="lt"></li>
+						<li class="lt"></li>
+					</ul>
+				</div>
+	        </li>
+	        <li><a href="" name="redphone">红米</a></li>
+	        <li><a href="" name="tabletPC">平板</a></li>
+	        <li><a href="" name="computer">电脑</a></li>
+	        <li><a href="" name="box">盒子</a></li>
+	        <li><a href="" name="router">路由器</a></li>
+	        <li><a href="" name="hardware">智能硬件</a></li>  
+	    </ul>
+    </div>
+    <div class="rt" id="head_search">
+    	<input class="form-control" id="head_searchinput" type="text" placeholder="小米手机5" />
+    	<input class="form-control" id="head_searchbtn" type="button" value="提交"/>
+    </div>
+    <div id="head_search_div">
+		<ul>
+			<li><a>小米Max</a></li>
+		</ul>
+	</div>
+    <div class="clearfix"></div>
+</div>
+
+<script>
+	
+	
+	
+	$(function(){
+				
+			$.getJSON("json/products.json", function(data){
+				$("#head_product_item_ul li").each(function(index){
+					$(this).append("<div><a href=''><img src=\""+data.head_nav_products[index].img+"\"/><div><a href=''>"+data.head_nav_products[index].name+"</a></div></a></div><div><span>"+data.head_nav_products[index].price+"起</span></div>");
+					});
+					$("#head_product_item_div").hide();
+				});
+				
+				$(".head_nav_item").hover(function(){
+					$("#head_product_item_div").show();
+				},function(){
+					$("#head_product_item_div").hide();
+				});
+			});
+	
+</script>
+
+
+
+
+
+
+
+
+
